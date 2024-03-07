@@ -23,7 +23,7 @@ Clonar o Repositório:
 Clone este repositório para o seu ambiente de desenvolvimento:
 
 
-git clone https://github.com/seu-usuario/meu-projeto-jsf.git
+git clone [https://github.com/seu-usuario/meu-projeto-jsf.git](https://github.com/Sannegri/meu-projeto-jsf)
 Abrir o Projeto na IDE:
 Abra o projeto na sua IDE Java.
 
