@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Gerenciamento de Endereços</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel header="Cadastro de Endereço">
+            <p:inputText value="#{enderecoBean.endereco.rua}" placeholder="Rua"/>
+            <p:inputText value="#{enderecoBean.endereco.cidade}" placeholder="Cidade"/>
+            <p:inputText value="#{enderecoBean.endereco.estado}" placeholder="Estado"/>
+            <p:commandButton value="Salvar" action="#{enderecoBean.salvar}"/>
+        </p:panel>
+
+        <p:dataTable var="e" value="#{enderecoBean.enderecos}">
+            <p:column headerText="Rua">
+                <h:outputText value="#{e.rua}"/>
+            </p:column>
+            <p:column headerText="Cidade">
+                <h:outputText value="#{e.cidade}"/>
+            </p:column>
+            <p:column headerText="Estado">
+                <h:outputText value="#{e.estado}"/>
+            </p:column>
+            <p:column headerText="Ações">
+                <p:commandButton value="Excluir" action="#{enderecoBean.excluir(e.id)}"/>
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>
